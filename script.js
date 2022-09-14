@@ -1,15 +1,16 @@
 //! DISPLAY/UI
 
-import { TILE_STATUSES , createBoard , markTile } from './logic.js';
+import { TILE_STATUSES , createBoard , markTile , revealTile, checkWin , checkLose } from './logic.js';
 
 const BOARD_SIZE = 10;
-const NUMBER_OF_MINES =5;
+const NUMBER_OF_MINES = 10;
 
 const board = createBoard(BOARD_SIZE, NUMBER_OF_MINES);
 const boardElement = document.querySelector('.board');
 const minesLeftText = document.querySelector("[data-mine-count]")
+const messageText = document.querySelector(".subtext");
 
-console.log(board)
+// console.log(board)
 
 board.forEach((row)=>{
     row.forEach((tile) => {
@@ -17,7 +18,8 @@ board.forEach((row)=>{
 
         //Left Click Event
         tile.element.addEventListener('click' , () => {
-
+            revealTile(board, tile);
+            checkGameEnd();
         });
         //Right click Event
         tile.element.addEventListener("contextmenu", (e)=>{
@@ -37,4 +39,30 @@ function listMinesLeft(){
     } , 0);
 
     minesLeftText.textContent = NUMBER_OF_MINES - markedTilesCount;
+}
+
+function checkGameEnd(){
+    const win = checkWin(board);
+    const lose = checkLose(board); 
+
+    if(win || lose){
+        boardElement.addEventListener('click' , stopProp, {capture: true} )
+        boardElement.addEventListener("contextmenu", stopProp, { capture: true });
+    }
+    if(win){
+        messageText.textContent = "You Win"
+    }
+    if(lose){
+         messageText.textContent = "You Lost";
+         board.forEach(row => {
+            row.forEach(tile => {
+                if(tile.status === TILE_STATUSES.MARKED) markTile(tile)
+                if(tile.mine) revealTile(board,tile)
+            })
+         })
+    }
+}
+
+function stopProp(e){
+    e.stopImmediatePropagation();
 }
