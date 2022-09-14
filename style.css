@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-color: #333;
+  background-color: lightblue;
   display: flex;
   align-items: center;
   font-size: 3rem;
@@ -17,7 +17,7 @@ body {
 }
 
 .subtext {
-  color: #CCC;
+  color: black;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
@@ -28,7 +28,7 @@ body {
   grid-template-columns: repeat(var(--size), 60px);
   grid-template-rows: repeat(var(--size), 60px);
   gap: 4px;
-  background-color: #777;
+  background-color: goldenrod;
 }
 
 .board > * {
@@ -37,13 +37,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  border: 2px solid #BBB;
+  color: black;
+  border: 2px solid purple;
   user-select: none;
 }
 
 .board > [data-status="hidden"] {
-  background-color: #BBB;
+  background-color: rgb(167, 134, 167);
   cursor: pointer;
 }
 
@@ -56,5 +56,5 @@ body {
 }
 
 .board > [data-status="marked"] {
-  background-color: yellow;
+  background-color: yellowgreen;
 }
