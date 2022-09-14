@@ -14,7 +14,7 @@
 
 <hr>
 
-[📍click here to see page]()
+[📍click here to see page](https://yasinsutoglu.github.io/MineField-Game/)
 
 <!-- ------------------------------------------------------ -->
 
@@ -29,6 +29,7 @@ Game Project (folder)
         |----index.html  
         |----style.css 
         |----script.js  
+        |----logic.js
 ```
 
 <!-- --------------------------------------- -->
@@ -45,9 +46,9 @@ Game Project (folder)
 
 - HTML / Semantic elements 
 
-- CSS / Flexbox - Grid - Position Property - Transform - Transition
+- CSS / Flexbox - Grid 
 
-- JS / DOM Manipulation - SetTimeOut Function - Arrow Function - Destructuring - Events - Conditionals - Loops
+- JS / DOM Manipulation - Arrow Function - Destructuring - Events - Conditionals - Loops - Bind - Array Methods - Objects
 ### At the end of the project, i will be able to;
 
 - improve coding skills within HTML & CSS & JS

@@ -7,7 +7,7 @@ export const TILE_STATUSES = {
     MARKED : 'marked',
 }
 
-// Mayin Tarlasi Olusturan Fonksiyon
+//?Mayin Tarlasi Olusturan Fonksiyon
 export function createBoard(boardSize,numberOfMines){
     const board = [];
     const minePositions = getMinePositions(boardSize,numberOfMines);
