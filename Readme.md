@@ -1,7 +1,7 @@
 <h1 align="center">MineField Game</h1>
 
 <h3>Overview</h3>
-👨‍💻 In this project I mastered division and basic animation skills. I used mainly HTML, CSS and JS (DOM Manipulation). You can see visual demo of the website below. The objective is to build out this real-like webpage and make it looking as professional as possible..
+👨‍💻 In this project I mastered division and functional programming skills. I used mainly HTML, CSS and JS (DOM Manipulation). You can see visual demo of the website below. The objective is to build out this real-like webpage and make it looking as professional as possible..
 <hr>
 
 ## ✨ Demo
